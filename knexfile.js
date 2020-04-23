@@ -29,6 +29,9 @@ module.exports = {
   // heroku will look for a production configuration
   production: {
     client: 'pg', // remember to npm i pg
-    connection: process.env.DATABASE_URL // from heroku convig vars
+    connection: process.env.DATABASE_URL, // from heroku convig vars
+    migrations: {
+      directory: "./data/migrations",
+    },
   }
 };
